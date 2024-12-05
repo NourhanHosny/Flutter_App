@@ -15,10 +15,13 @@ class HomeScreen extends StatelessWidget {
          ],
          centerTitle: true,
        ),
-         body: Column(
-           children: [
-               Expanded(
-                 child: Container(
+         body: SingleChildScrollView(
+           scrollDirection: Axis.horizontal,
+           child: Row(
+             crossAxisAlignment:CrossAxisAlignment.start,
+             children: [
+                 Container(
+                   height: 200,
                    color: Colors.red,
                    child: const Text(
                    'this is the first line',
@@ -26,11 +29,10 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 20,
 
                     ),
-             ),
-                 ),
                ),
-             Expanded(
-               child: Container(
+                 ),
+               Container(
+                 height: 200,
                  color: Colors.blue,
                  child: const Text(
                    'this is the first line',
@@ -40,20 +42,52 @@ class HomeScreen extends StatelessWidget {
                    ),
                  ),
                ),
-             ),
-             Expanded(
-               child: Container(
+               Container(
+                 height: 200,
                  color: Colors.yellow,
                  child: const Text(
                    'this is the first line',
                    style: TextStyle(
                      fontSize: 20,
-                     
+
                    ),
                  ),
                ),
-             ),
-           ],
+               Container(
+                 height: 200,
+                 color: Colors.blue,
+                 child: const Text(
+                   'this is the first line',
+                   style: TextStyle(
+                     fontSize: 20,
+
+                   ),
+                 ),
+               ),
+               Container(
+                 height: 200,
+                 color: Colors.blue,
+                 child: const Text(
+                   'this is the first line',
+                   style: TextStyle(
+                     fontSize: 20,
+
+                   ),
+                 ),
+               ),
+               Container(
+                 height: 200,
+                 color: Colors.blue,
+                 child: const Text(
+                   'this is the first line',
+                   style: TextStyle(
+                     fontSize: 20,
+
+                   ),
+                 ),
+               ),
+             ],
+           ),
          ),
        );
   }
