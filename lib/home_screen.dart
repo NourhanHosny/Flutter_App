@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,74 +19,43 @@ class HomeScreen extends StatelessWidget {
        ),
          body: SingleChildScrollView(
            scrollDirection: Axis.horizontal,
-           child: Row(
-             crossAxisAlignment:CrossAxisAlignment.start,
+           child: Column(
              children: [
-                 Container(
-                   height: 200,
-                   color: Colors.red,
-                   child: const Text(
-                   'this is the first line',
-                    style: TextStyle(
-                      fontSize: 20,
+               Stack(
+                 alignment: AlignmentDirectional.bottomCenter,
+                 children: [
+                  Container(
+                    width: 300,
+                    height: 300,
+                    color: Colors.blue,
+                    child: const Image(
+                      image:
+                        NetworkImage(
+                          'https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        ),
+                         fit: BoxFit.cover,
+                      ),
+                  ),
+                     Container(
+                       width: 300,
+                       color: Colors.black.withOpacity(0.4),
+                       
+                       padding: EdgeInsets.symmetric(
+                         vertical: 10,
+                         horizontal: 10,
+                       ),
+                       child: const Text(
+                       'this is the first line',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 30,
+                           color: Colors.white,
 
-                    ),
-               ),
-                 ),
-               Container(
-                 height: 200,
-                 color: Colors.blue,
-                 child: const Text(
-                   'this is the first line',
-                   style: TextStyle(
-                     fontSize: 20,
-
+                        ),
                    ),
-                 ),
-               ),
-               Container(
-                 height: 200,
-                 color: Colors.yellow,
-                 child: const Text(
-                   'this is the first line',
-                   style: TextStyle(
-                     fontSize: 20,
+                     ),
 
-                   ),
-                 ),
-               ),
-               Container(
-                 height: 200,
-                 color: Colors.blue,
-                 child: const Text(
-                   'this is the first line',
-                   style: TextStyle(
-                     fontSize: 20,
-
-                   ),
-                 ),
-               ),
-               Container(
-                 height: 200,
-                 color: Colors.blue,
-                 child: const Text(
-                   'this is the first line',
-                   style: TextStyle(
-                     fontSize: 20,
-
-                   ),
-                 ),
-               ),
-               Container(
-                 height: 200,
-                 color: Colors.blue,
-                 child: const Text(
-                   'this is the first line',
-                   style: TextStyle(
-                     fontSize: 20,
-
-                   ),
-                 ),
+                 ],
                ),
              ],
            ),
